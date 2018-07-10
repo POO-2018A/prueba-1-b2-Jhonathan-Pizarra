@@ -61,6 +61,14 @@ public class GUIPrueba extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        panelClientes = new javax.swing.JPanel();
+        labelNombreCliente = new javax.swing.JLabel();
+        labelCedulaCliente = new javax.swing.JLabel();
+        textNombreCliente = new javax.swing.JTextField();
+        textCedulaCliente = new javax.swing.JTextField();
+        buttonRegistrarCliente = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableClientes = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         labelListaFrutas = new javax.swing.JLabel();
         labelCodigoFrutas = new javax.swing.JLabel();
@@ -82,14 +90,6 @@ public class GUIPrueba extends javax.swing.JFrame {
         tableRegistroFrutas = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
         tableRegistroCliente = new javax.swing.JTable();
-        panelClientes = new javax.swing.JPanel();
-        labelNombreCliente = new javax.swing.JLabel();
-        labelCedulaCliente = new javax.swing.JLabel();
-        textNombreCliente = new javax.swing.JTextField();
-        textCedulaCliente = new javax.swing.JTextField();
-        buttonRegistrarCliente = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tableClientes = new javax.swing.JTable();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -118,6 +118,68 @@ public class GUIPrueba extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        labelNombreCliente.setText("Nombre:");
+
+        labelCedulaCliente.setText("Cédula:");
+
+        buttonRegistrarCliente.setText("Registrar");
+        buttonRegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRegistrarClienteActionPerformed(evt);
+            }
+        });
+
+        tableClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(tableClientes);
+
+        javax.swing.GroupLayout panelClientesLayout = new javax.swing.GroupLayout(panelClientes);
+        panelClientes.setLayout(panelClientesLayout);
+        panelClientesLayout.setHorizontalGroup(
+            panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelClientesLayout.createSequentialGroup()
+                .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelClientesLayout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelCedulaCliente)
+                            .addComponent(labelNombreCliente))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textCedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonRegistrarCliente)))
+                    .addGroup(panelClientesLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+        panelClientesLayout.setVerticalGroup(
+            panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelClientesLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelNombreCliente)
+                    .addComponent(textNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCedulaCliente)
+                    .addComponent(textCedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addComponent(buttonRegistrarCliente)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Cliente", panelClientes);
 
         labelListaFrutas.setText("Lista de frutas:");
 
@@ -278,81 +340,21 @@ public class GUIPrueba extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Registros", jPanel3);
 
-        labelNombreCliente.setText("Nombre:");
-
-        labelCedulaCliente.setText("Cédula:");
-
-        buttonRegistrarCliente.setText("Registrar");
-        buttonRegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRegistrarClienteActionPerformed(evt);
-            }
-        });
-
-        tableClientes.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane2.setViewportView(tableClientes);
-
-        javax.swing.GroupLayout panelClientesLayout = new javax.swing.GroupLayout(panelClientes);
-        panelClientes.setLayout(panelClientesLayout);
-        panelClientesLayout.setHorizontalGroup(
-            panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelClientesLayout.createSequentialGroup()
-                .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelClientesLayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelCedulaCliente)
-                            .addComponent(labelNombreCliente))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textCedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonRegistrarCliente)))
-                    .addGroup(panelClientesLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        panelClientesLayout.setVerticalGroup(
-            panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelClientesLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNombreCliente)
-                    .addComponent(textNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCedulaCliente)
-                    .addComponent(textCedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addComponent(buttonRegistrarCliente)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Cliente", panelClientes);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 16, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 27, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
